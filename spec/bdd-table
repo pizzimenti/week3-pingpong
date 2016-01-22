@@ -1,0 +1,6 @@
+Behavior                                Input         Output
+displays number that was input          1             1
+displays range up to what was input     2             1,2
+displays 'ping' for numbers divis by 3  3             1,2,ping
+displays 'pong' for numbers divis by 5  5             1,2,ping,4,pong
+displays 'pingpong' for divis by 3 / 5  15            1...pingpong
