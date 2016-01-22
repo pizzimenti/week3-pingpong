@@ -1,5 +1,5 @@
 body {
-  margin: 0
+  margin: 0;
 }
 
 #pagetop {
@@ -11,6 +11,7 @@ body {
 }
 
 #about-pane {
+  float: left;
   padding: 10px;
   background-color: darkSeaGreen;
 }
@@ -20,5 +21,7 @@ body {
 }
 
 #app-pane {
-
+  float: left;
+  padding: 10px;
+  padding-left: 40px;
 }
