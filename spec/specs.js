@@ -8,4 +8,7 @@ describe('pingPong', function () {
   it("displays 'ping' for any number divisible by 3", function () {
     expect(pingPong(3)).to.eql([1,2,'ping']);
   });
+  it("displays 'pong' for any number divisible by 5", function () {
+    expect(pingPong(5)).to.eql([1,2,'ping',4,'pong']);
+  });
 });
