@@ -3,7 +3,9 @@ var pingPong = function(rangeMax) {
 
   for (var i = 0; i <= rangeMax; i++) {
 
-    if (i % 3 === 0) {
+    if (i % 3 === 0 && i % 5 === 0) {
+    ppArray.push("pingpong");
+    } else if (i % 3 === 0) {
       ppArray.push("ping");
     } else if (i % 5 === 0) {
       ppArray.push("pong");
