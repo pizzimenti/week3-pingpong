@@ -17,3 +17,17 @@ var pingPong = function(rangeMax) {
   ppArray.splice(0,1);
   return ppArray;
 };
+
+
+$(function() {
+  $("form#pingpong-form").submit(function(event) {
+      event.preventDefault();
+
+      var rangeMax = parseInt($("input#rangeMax").val());
+
+      var resultArray = pingPong(rangeMax);
+      var result = resultArray.toString();
+
+      $("#result").text(result);
+  });
+});
