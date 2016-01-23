@@ -21,13 +21,20 @@ var pingPong = function(rangeMax) {
 
 $(function() {
   $("form#pingpong-form").submit(function(event) {
-      event.preventDefault();
+    event.preventDefault();
 
-      var rangeMax = parseInt($("input#rangeMax").val());
+    var rangeMax = parseInt($("input#rangeMax").val()); //get rangeMax from the html form
+    var resultArray = pingPong(rangeMax); // call business logic function to generate the result as an array
+    var list = $("#pingpong-list"); //variable for UL in DOM
+    var result = list.parent(); //define the list parent
 
-      var resultArray = pingPong(rangeMax);
-      var result = resultArray.toString();
-
-      $("#result").text(result);
+    list.detach().empty().each(function(i){                 //detatch the list to keep dom from constant rerender, empty the list, and then perform...
+      for (var x = 0; x < resultArray.length; x++){           //check to see if we still have results to display. if we do...
+        $(this).append('<li>' + resultArray[x] + '</li>');    //append the current iteration to pongPongList
+        if (x == resultArray.length - 1){                   //if we have reached the end of the array
+            $(this).appendTo(result);               ///append the results to the list parent
+          }
+        }
+    });
   });
 });
